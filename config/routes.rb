@@ -12,4 +12,5 @@ Rails.application.routes.draw do
 
   resources :video_games
   resources :users
+  resources :reservations
 end

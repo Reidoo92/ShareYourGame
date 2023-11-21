@@ -11,8 +11,8 @@
                 required: true,
                 input_html: { autocomplete: "last-name" } %>
     <%= f.input :birthday,
-                required: true,
-                input_html: { autocomplete: "birthday" } %>
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
     <%= f.input :user_name,
                 required: true,
                 input_html: { autocomplete: "user-name" } %>

@@ -5,4 +5,20 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :reservations
+  has_many :video_games, through: :reservations
+
+  validates :user_name, :first_name, :last_name, :birthday, :email, :password, presence: true
+  validates :user_name, :email, uniqueness: true
+
+  PASSWORD_FORMAT = /\A
+  (?=.{8,})          # Must contain 8 or more characters
+  (?=.*\d)           # Must contain a digit
+  (?=.*[a-z])        # Must contain a lower case character
+  (?=.*[A-Z])        # Must contain an upper case character
+  (?=.*[[:^alnum:]]) # Must contain a symbol
+/x
+
+  validates :password, format: { with: PASSWORD_FORMAT }
+
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 end
