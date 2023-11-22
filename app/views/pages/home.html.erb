@@ -1,2 +1,12 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="flex-container">
+  <% @video_games.each do |video_game| %>
+    <%= link_to video_game_path(video_game), class: "link" do %>
+      <div class="game-card" style="background-image: url('<%= image_path('Call-of-Duty-MW3-Cover.jpg') %>'); background-size: cover; background-position: center; back">
+      </div>
+        <div class="title">
+        <%= video_game.title %>
+       <strong><%= video_game.price %> €</strong>
+        </div>
+    <% end %>
+  <% end %>
+</div>
