@@ -1,12 +1,18 @@
-<div class="flex-container">
+<!DOCTYPE html>
+<html lang="en">
+<body class=home-body>
+<div class="home-container">
   <% @video_games.each do |video_game| %>
     <%= link_to video_game_path(video_game), class: "link" do %>
-      <div class="game-card" style="background-image: url('<%= image_path('Call-of-Duty-MW3-Cover.jpg') %>'); background-size: cover; background-position: center; back">
+      <div class="home-card" style="background-image: url('<%= image_path('Call-of-Duty-MW3-Cover.jpg') %>'); background-size: cover; background-position: center; back">
       </div>
-        <div class="title">
+        <div class="home-title">
         <%= video_game.title %>
-       <strong><%= video_game.price %> €</strong>
+       <div class="price"><strong><%= video_game.price %>€</strong>
+       </div>
         </div>
     <% end %>
   <% end %>
 </div>
+</body>
+</html>
