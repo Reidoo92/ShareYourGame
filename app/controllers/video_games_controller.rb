@@ -3,7 +3,6 @@ class VideoGamesController < ApplicationController
 
   def index
     @video_games = VideoGame.all
-    @game = VideoGame.first
   end
 
   def create
