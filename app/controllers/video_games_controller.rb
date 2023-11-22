@@ -1,5 +1,10 @@
 class VideoGamesController < ApplicationController
   # before_action :set_video_game, only: %i[ show edit update destroy ]
+
+  def index
+    @video_games = VideoGame.all
+  end
+
   def create
     @video_game = VideoGame.new(video_game_params)
     if @video_game.save
@@ -38,6 +43,7 @@ private
   # def set_video_game
   #   @video_game = VideoGame.find(params[:id])
   # end
+
 
   def video_game_params
     params.require(:video_game).permit(:title, :description, :price, :category)
