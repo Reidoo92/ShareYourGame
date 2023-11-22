@@ -9,9 +9,7 @@
 
 <h2>Add your game</h2>
 
-
-
-<%= form_with model: @video_game do |f| %>
+<%= simple_form_for(@video_game) do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :category %>
@@ -21,7 +19,9 @@
   <%= f.label :price %>
   <%= f.number_field :price %>
   <%= f.submit %>
+  <%= f.input :photo, as: :file %>
 <% end %>
+
 
 
 
