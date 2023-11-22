@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  resources :video_games
   resources :users
-  resources :reservations
+  resources :video_games, onliy: [:new, :create, :edit, :update, :destroy, :show]
+  resources :reservations, only: [:new, :create, :destroy, :show]
 end

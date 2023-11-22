@@ -1,0 +1,11 @@
+<h1>Réserver un jeu vidéo</h1>
+
+<%= form_with(model: @reservation, url: reservations_path, method: :post) do |form| %>
+  <div class="field">
+    <%= form.label :video_game_id, "Sélectionner un jeu vidéo" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Réserver" %>
+  </div>
+<% end %>
