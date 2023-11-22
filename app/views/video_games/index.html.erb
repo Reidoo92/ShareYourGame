@@ -1,2 +1,13 @@
-<h1>Mes Jeux</h1>
-<%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :fill %>
+<h1>Mes Jeux 🎮</h1>
+<br>
+<div class="flex-container">
+  <% @video_games.each do |video_game| %>
+    <%= link_to video_game_path(video_game), class: "link" do %>
+      <div class="game-card" style="background-image: url('<%= image_path('Call-of-Duty-MW3-Cover.jpg') %>'); background-size: cover; background-position: center; back">
+      </div>
+        <div class="title">
+        <%= video_game.title %>
+        </div>
+    <% end %>
+  <% end %>
+</div>
