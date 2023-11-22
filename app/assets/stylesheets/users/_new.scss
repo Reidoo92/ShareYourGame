@@ -1,0 +1,41 @@
+body {
+  background-color: #323232;
+}
+
+.custom-input {
+  background-color: rgba(16,16,16,.4);
+  width: 308px;
+  height: 40px;
+}
+
+.box-register {
+  flex-direction: row!important;
+  color: #fff;
+  height: 100%;
+  width: 50%;
+  margin-left: 220px;
+  margin-top: 40px;
+}
+
+.form-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.wallpaper {
+  background-image: url(https://www.instant-gaming.com/themes/igv2/modules/register/images/wallpaper.jpg);
+  background-size: cover;
+  background-position: top;
+  width: 50%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.register {
+  width: 100%;
+  align-items: center;
+  max-width: 100%;
+}
