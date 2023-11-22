@@ -1,7 +1,7 @@
 
 <div class=".container p-5">
   <h1><%= @video_game.title %></h1>
-  <%= cl_image_tag @video_game.photo.key, class: "w-25", crop: :fill if video_game.photo.attached?%> <br>
+  <%= image_tag ("Call-of-Duty-MW3-Cover.jpg"), class: "w-25"%> <br>
   <p> </p>
   <p><%= @video_game.description %></p>
  <p><%= @video_game.price %>€</p>

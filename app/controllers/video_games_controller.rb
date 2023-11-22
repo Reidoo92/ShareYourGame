@@ -10,6 +10,7 @@ class VideoGamesController < ApplicationController
       @video_game = VideoGame.new(video_game_params)
       @video_game.user = current_user
       @video_game.save!
+
       if @video_game.save
         redirect_to video_games_path, notice: "Your game was successfully created."
       else
@@ -47,7 +48,6 @@ private
   # def set_video_game
   #   @video_game = VideoGame.find(params[:id])
   # end
-
 
   def video_game_params
     params.require(:video_game).permit(:title, :description, :price, :category, :photo)
