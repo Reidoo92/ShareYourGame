@@ -6,11 +6,15 @@ class VideoGamesController < ApplicationController
   end
 
   def create
-    @video_game = VideoGame.new(video_game_params)
-    if @video_game.save
-      redirect_to @users, notice: "Your game was successfully created."
-    else
-      render :new, status: :unprocessable_entity
+    if current_user
+      @video_game = VideoGame.new(video_game_params)
+      @video_game.user = current_user
+      @video_game.save
+      if @video_game.save
+        redirect_to video_games_path, notice: "Your game was successfully created."
+      else
+        render :new, status: :unprocessable_entity
+      end
     end
   end
 
