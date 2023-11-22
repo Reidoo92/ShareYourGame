@@ -1,0 +1,37 @@
+body {
+  background-color: #323232;
+}
+
+input {
+  background-color: rgba(16, 16, 16, 0.4);
+}
+
+.form-group,
+h2 {
+  color: white;
+}
+
+.full-height-image {
+  height: calc(
+    100vh - 56px
+  ); /* 100% de la hauteur de la fenêtre moins la hauteur de la navbar */
+  position: fixed;
+  right: 0;
+  top: 66px; /* Hauteur de la navbar */
+  width: auto;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.btn-custom-color {
+  background-color: #ff0000; /* Remplacez cette couleur par celle que vous souhaitez */
+  color: #ffffff; /* Couleur du texte du bouton */
+}
