@@ -3,13 +3,14 @@ class VideoGamesController < ApplicationController
 
   def index
     @video_games = VideoGame.all
+    @game = VideoGame.first
   end
 
   def create
     if current_user
       @video_game = VideoGame.new(video_game_params)
       @video_game.user = current_user
-      @video_game.save
+      @video_game.save!
       if @video_game.save
         redirect_to video_games_path, notice: "Your game was successfully created."
       else
@@ -50,5 +51,5 @@ private
 
 
   def video_game_params
-    params.require(:video_game).permit(:title, :description, :price, :category)
+    params.require(:video_game).permit(:title, :description, :price, :category, :photo)
   end
