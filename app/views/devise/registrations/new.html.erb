@@ -1,39 +1,59 @@
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
-  <div class="box-register">
-  <div class="form-inputs">
-  <div class="wallpaper"></div>
-  <div class="register">
-    <%= f.input :first_name,
-                required: true,
-                input_html: { autocomplete: "first-name", class: "custom-input" } %>
-    <%= f.input :last_name,
-                required: true,
-                input_html: { autocomplete: "last-name", class: "custom-input" } %>
-    <%= f.input :birthday,
-            as: :string,
-            input_html: { data: { controller: "datepicker" }, class: "custom-input" } %>
-    <%= f.input :user_name,
-                required: true,
-                input_html: { autocomplete: "user-name", class: "custom-input" } %>
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email", class: "custom-input" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password", class: "custom-input" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password", class: "custom-input" } %>
-</div>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
+  <div class="body-home">
+    <div class="wallpaper"></div>
+    <div class="register">
+      <div class="form-flex">
+        <%= f.input :first_name, label: false,
+          required: true,
+          input_html: { autocomplete: "first-name", class: "custom-input", placeholder: "First name:" } %>
+        <%= f.input :last_name, label: false,
+          required: true,
+          input_html: { autocomplete: "last-name", class: "custom-input", placeholder: "Last name:" } %>
+      </div>
+
+      <div class="form-flex">
+        <%= f.input :birthday, label: false,
+          as: :string,
+          input_html: { data: { controller: "datepicker" }, class: "custom-input", placeholder: "Birthday:" } %>
+        <%= f.input :user_name, label: false,
+          required: true,
+          input_html: { autocomplete: "user-name", class: "custom-input", placeholder: "Username:" } %>
+      </div>
+
+      <div class="form-flex">
+        <%= f.input :email, label: false,
+          required: true,
+          autofocus: true,
+          input_html: { autocomplete: "email", class: "custom-input", placeholder: "Email:" } %>
+        <div class="mb-3 email required user_email">
+          <input class="form-control string email required custom-input"
+                 autocomplete="email"
+                 placeholder="Email Confirmation:"
+                 autofocus="autofocus"
+                 required="required"
+                 aria-required="true"
+                 type="email"
+                 value=""
+                 name="user[email]"
+                 id="user_email">
+        </div>
+      </div>
+
+      <div class="form-flex">
+        <%= f.input :password, label: false,
+          required: true,
+          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+          input_html: { autocomplete: "new-password", class: "custom-input", placeholder: "Password:" } %>
+        <%= f.input :password_confirmation, label: false,
+          required: true,
+          input_html: { autocomplete: "new-password", class: "custom-input", placeholder: "Password confirmation:" } %>
+      </div>
+  <div class="button-action">
+    <%= f.button :submit, "SUBMIT".html_safe, class: "submit-button" %>
+    <%= link_to "LOG IN", new_session_path(resource_name), class: "new-button" %>
 <% end %>
-</div>
-
-<%= render "devise/shared/links" %>
+  </div>
+    </div>
+  </div>
