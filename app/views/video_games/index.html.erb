@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <body class=home-body>
-   <h1>My video games</h1>
-    <div class="home-container">
-      <% current_user.video_games.each do |video_game| %>
-        <%= link_to video_game_path(video_game), class: "link" do %>
-          <div class="home-card" style="background-image: url('<%= image_path('Call-of-Duty-MW3-Cover.jpg') %>'); background-size: cover; background-position: center; back">
-          </div>
+    <div>
+      <%= image_tag("bgc_video_games.jpg", class: "background-image", alt: "Background for video games") %>
+      <div class="title-pages"><h1><strong>My video games</strong></h1></div>
+      <div class="home-container">
+        <% current_user.video_games.each do |video_game| %>
+          <%= link_to video_game_path(video_game), class: "link" do %>
+            <div class="home-card" style="background-image: url('<%= image_path('Call-of-Duty-MW3-Cover.jpg') %>'); background-size: cover; background-position: center; back"></div>
             <div class="home-title">
-            <%= video_game.title %>
+              <%= video_game.title %>
             </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
 
 
-
-    <h1>My reservation</h1>
+    <div class="title-pages"><h1><strong>My reservations</strong></h1></div>
     <div class="home-container">
       <% current_user.reservations.each do |reservation| %>
         <%= link_to video_game_path(reservation.video_game), class: "link" do %>
-          <div class="home-card" style="background-image: url('<%= image_path('Call-of-Duty-MW3-Cover.jpg') %>'); background-size: cover; background-position: center; back">
-          </div>
-            <div class="home-title">
+          <div class="home-card" style="background-image: url('<%= image_path('Call-of-Duty-MW3-Cover.jpg') %>'); background-size: cover; background-position: center; back"></div>
+          <div class="home-title">
             <%= reservation.video_game.title %>
-            </div>
+          </div>
         <% end %>
       <% end %>
+    </div>
   </body>
 </html>
