@@ -27,6 +27,13 @@ class UsersController < ApplicationController
     @user.update(update_user_name[:user])
   end
 
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+
+    redirect_to root_path, status: :see_other
+  end
+
   private
 
   def user_all
@@ -38,7 +45,7 @@ class UsersController < ApplicationController
   end
 
   def update_user_name
-    params.require(:user).permit(:user_name)
+    params.require(:user).permit(:user_name, :eamil, :password)
   end
 
   # Fonction qui permet d'afficher l'âge de l'utilisateur grâce à sa date d'anniversaire
