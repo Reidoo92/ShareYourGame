@@ -2,7 +2,7 @@
 
 <div data-controller="date" data-date-price-value="<%= @video_game.price %>">
 
-  <%= simple_form_for @reservation do |f|%>
+<%= simple_form_for @reservation, url: reservations_path, method: :post do |f| %>
 
     <%= f.input :start_location, label: false,
               as: :string,
@@ -12,9 +12,8 @@
               input_html: { data: { controller: "datepicker", target: "datepicker.range", range: true , date_target: "end", action: "input->date#calcule" }, class: "custom-input", placeholder: "Choose Reservation Period:" } %>
 
 
-      Date Difference: <span data-date-target="result"></span>
+      Prix de la location : <span data-date-target="result"></span>
 
-    <%= link_to "Valider", video_games_path %>
-
-  <% end %>
+     <%= link_to "Valider", video_games_path, class: "new-button", onclick: "$('form').submit();" %>
+<% end %>
 </div>

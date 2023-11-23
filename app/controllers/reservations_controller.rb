@@ -6,6 +6,12 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
+
+    if @reservation.save
+      redirect_to desired_path, notice: 'Reservation was successfully created.'
+    else
+      render :new
+    end
   end
 
   def new
