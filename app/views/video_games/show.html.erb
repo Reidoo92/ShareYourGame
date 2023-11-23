@@ -10,7 +10,7 @@
   <div data-controller="toggle">
       <%= link_to "Reservation", "#", class: "reservation-link button", data: { action: "click->toggle#fire" } %>
     <div data-toggle-target="togglabelElement" class="d-none">
-      <%= render "form", video_game: @video_game %>
+      <%= render "reservations/new", video_game: @video_game %>
     </div>
   </div>
   <% if @video_game.user.id == current_user.id %>
