@@ -1,0 +1,42 @@
+
+.simple-form {
+  width: 400px; /* Largeur du formulaire */
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #2c2c2c; /* Couleur de fond du formulaire sombre */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ombre légère */
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-inputs {
+  margin-bottom: 20px;
+}
+
+.form-actions {
+  text-align: center;
+}
+
+.btn-submit {
+  background-color: #4caf50; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte clair */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #45a049; /* Couleur de fond au survol du bouton */
+}
+
+a {
+  color: #3498db; /* Couleur du lien */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2980b9; /* Couleur du lien au survol */
+}
