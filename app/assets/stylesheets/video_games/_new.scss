@@ -4,14 +4,14 @@
 }
 
 .custom-input2:focus {
-  background-color: rgba(16,16,16,.4);
+  background-color: rgba(16, 16, 16, 0.4);
   color: #fff;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .custom-input2::placeholder {
   color: #999;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .add-card-game {
@@ -38,7 +38,7 @@
 .custom-input2 {
   margin-bottom: 10px;
   box-shadow: inset 0 0 0 2px var(--color-medium);
-  background-color: rgba(16,16,16,.4);
+  background-color: rgba(16, 16, 16, 0.4);
   width: 280px;
   height: 40px;
   border-radius: 8px;
@@ -66,8 +66,8 @@
 .add-text {
   text-align: center;
   margin-top: 150px;
-  color: rgba(16,16,16,.4);
-  font-family: 'Courier New', Courier, monospace;
+  color: rgba(222, 24, 24, 0.4);
+  font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   margin-right: 740px;
 }
