@@ -42,6 +42,7 @@ class VideoGamesController < ApplicationController
 
   def show
     @video_game = VideoGame.find(params[:id])
+    @reservation = Reservation.new
   end
 end
 
