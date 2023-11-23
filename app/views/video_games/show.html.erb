@@ -1,9 +1,16 @@
+<div class="contenu">
+  <div class="image-contenu">
+    <%= image_tag("Call-of-Duty-MW3-Cover.jpg", class: "taille_image") %>
+  </div>
+  <div class="infos-contenu">
 
-<div class=".container p-5">
-  <h1><%= @video_game.title %></h1>
-  <%= image_tag ("Call-of-Duty-MW3-Cover.jpg"), class: "w-25"%> <br>
-  <p> </p>
-  <p><%= @video_game.description %></p>
- <p><%= @video_game.price %>€</p>
-  <%= link_to "Reservation", class: "btn btn-primary" %>
+    <div class="titre"><h1><%= @video_game.title %></h1></div>
+    <div class="image-console">Image a mettre</div>
+    <div class="prix"><h2><%= @video_game.price %></h2></div>
+    <%= link_to "Reservation", "#", class: "reservation-link button" %>
+  </div>
+</div>
+
+<div class="description-container">
+  <p class="description"><%= @video_game.description %></p>
 </div>

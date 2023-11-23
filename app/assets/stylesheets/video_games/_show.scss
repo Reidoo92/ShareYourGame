@@ -1,0 +1,154 @@
+// .contenu {
+//   display: flex;
+//   align-items: stretch;
+// }
+
+// .image-contenu {
+//   width: 100%;
+//   max-width: 616px;
+//   object-fit: cover;
+// }
+
+// .taille_image {
+//   width: 100%;
+//   height: auto;
+//   border-radius: 10px;
+// }
+
+// .infos-contenu {
+//   width: 100%;
+//   max-width: 616px;
+//   object-fit: cover;
+//   flex: 1;
+//   padding: 20px;
+//   box-sizing: border-box;
+//   background-color: grey;
+//   color: white;
+//   border-radius: 8px;
+//   margin-right: 50px;
+//   margin-left: 50px;
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .titre {
+//   text-align: center;
+// }
+
+// .description-container {
+//   border: 2px solid white;
+//   border-radius: 8px;
+//   margin-bottom: 20px;
+//   height: 50%;
+//   overflow: hidden;
+//   padding: 10px; /* Ajout de padding pour la description */
+// }
+
+// .description {
+//   margin: 0;
+// }
+
+// .prix {
+//   text-align: center;
+// }
+
+// .reservation-link {
+//   margin-top: auto; /* Pour pousser le lien vers le bas de la div */
+//   display: block;
+//   text-align: center;
+//   margin-bottom: 10px; /* Ajout de marge en bas pour l'espace */
+// }
+
+// .button {
+//   display: inline-block;
+//   padding: 10px 20px;
+//   background-color: orange; /* Couleur de fond du bouton */
+//   color: white; /* Couleur du texte du bouton */
+//   text-decoration: none;
+//   border-radius: 5px;
+// }
+
+// .button:hover {
+//   background-color: #45a049; /* Couleur de fond au survol du bouton */
+// }
+
+.contenu {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.image-contenu {
+  width: 100%;
+  max-width: 616px;
+  object-fit: cover;
+}
+
+.taille_image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.infos-contenu {
+  width: 100%;
+  max-width: 616px;
+  object-fit: cover;
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: grey;
+  color: white;
+  border-radius: 8px;
+  margin-right: 50px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.titre {
+  text-align: center;
+}
+
+.image-console{
+  height: 25%;
+}
+
+.description-container {
+  border: 2px solid white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  height: 50%;
+  overflow: hidden;
+  padding: 10px; /* Ajout de padding pour la description */
+}
+
+.description {
+  margin: 0;
+}
+
+.prix {
+  text-align: center;
+}
+
+.reservation-link {
+  margin-top: auto; /* Pour pousser le lien vers le bas de la div */
+  display: block;
+  text-align: center;
+  margin-bottom: 10px; /* Ajout de marge en bas pour l'espace */
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: orange; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte du bouton */
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #45a049; /* Couleur de fond au survol du bouton */
+}
