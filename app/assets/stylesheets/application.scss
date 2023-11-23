@@ -9,8 +9,16 @@
 
 // Your CSS partials
 @import "components/index";
+
 @import "pages/index";
 
 @import "video_games/index";
 @import "video_games/show";
+
+@import "users/show";
+@import "users/new";
+
+@import "sessions/new";
+
+
 
