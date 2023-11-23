@@ -3,6 +3,7 @@ class VideoGamesController < ApplicationController
 
   def index
     @video_games = VideoGame.all
+    @video_games = VideoGame.new
   end
 
   def create
@@ -26,7 +27,8 @@ class VideoGamesController < ApplicationController
   def destroy
     @video_game = VideoGame.find(params[:id])
     @video_game.destroy
-    redirect_to @users, notice: "Your game was successfully deleted.", status: :see_other
+
+    redirect_to video_games_path, status: :see_other
   end
 
   def update

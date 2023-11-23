@@ -11,8 +11,13 @@
           <p><strong>Prénom :</strong> <%= @user.first_name.capitalize %></p>
           <p><strong>Âge :</strong> <%= calculate_age(@user.birthday) %></p>
           <p><strong>Email :</strong> <%= @user.email %></p>
-           <%= link_to "Éditer le profil", edit_user_path(@user), class: "btn btn-primary" %>
-          <%= link_to "Supprimer le profil", @user, method: :delete, data: { confirm: "Êtes-vous sûr ?" }, class: "btn btn-danger delete-button" %>
+           <%= link_to "Éditer le profil", edit_user_registration_path(@user), class: "btn btn-primary" %>
+
+
+          <%= link_to "Supprimer le profil", user_path(@user), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ?" }, class: "btn btn-danger delete-button" %>
+
+
+
         </div>
       </div>
     </div>

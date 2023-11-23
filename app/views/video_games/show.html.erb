@@ -7,7 +7,15 @@
     <div class="titre"><h1><%= @video_game.title %></h1></div>
     <div class="image-console">Image a mettre</div>
     <div class="prix"><h2><%= @video_game.price %></h2></div>
-    <%= link_to "Reservation", "#", class: "reservation-link button" %>
+  <div data-controller="toggle">
+      <%= link_to "Reservation", "#", class: "reservation-link button", data: { action: "click->toggle#fire" } %>
+    <div data-toggle-target="togglabelElement" class="d-none">
+      <%= render "form", video_game: @video_game %>
+    </div>
+  </div>
+    <%= link_to "Supprimer mon jeu", video_game_path(@video_game), data: {turbo_method: :delete, turbo_confirm: "Es-tu sur?"}, class: "reservation-link button" %>
+
+
   </div>
 </div>
 

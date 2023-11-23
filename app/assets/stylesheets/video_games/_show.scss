@@ -112,7 +112,7 @@
   text-align: center;
 }
 
-.image-console{
+.image-console {
   height: 25%;
 }
 
@@ -137,7 +137,8 @@
   margin-top: auto; /* Pour pousser le lien vers le bas de la div */
   display: block;
   text-align: center;
-  margin-bottom: 10px; /* Ajout de marge en bas pour l'espace */
+  margin-bottom: 10px;
+  width: 100%; /* Ajout de marge en bas pour l'espace */
 }
 
 .button {
