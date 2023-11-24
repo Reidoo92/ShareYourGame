@@ -4,7 +4,7 @@
 <div class="home-container">
   <% @video_games.each do |video_game| %>
     <%= link_to video_game_path(video_game), class: "link" do %>
-      <div class="home-card" style="background-image: url('<%= image_path('Call-of-Duty-MW3-Cover.jpg') %>'); background-size: cover; background-position: center; back">
+      <div class="home-card" style="background-image: url('<%= video_game.photo.attached? ? cl_image_path(video_game.photo.key) : image_path("Call-of-Duty-MW3-Cover.jpg") %>'); background-size: cover; background-position: center; back">
       </div>
         <div class="home-title">
         <%= video_game.title %>
