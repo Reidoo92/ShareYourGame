@@ -1,16 +1,28 @@
+<div class="image-fond"></div>
 <div class="contenu">
   <div class="image-contenu">
     <%= image_tag("Call-of-Duty-MW3-Cover.jpg", class: "taille_image") %>
   </div>
-  <div class="infos-contenu">
 
-    <div class="titre"><h1><%= @video_game.title %></h1></div>
-    <div class="image-console">Image a mettre</div>
-    <div class="prix"><h2><%= @video_game.price %></h2></div>
-  <div data-controller="toggle">
+  <div class="infos-contenu">
+    <div class="titre"><h1>
+      <%= @video_game.title %></h1>
+    </div>
+
+    <div class="image-console mx-5">
+      <%= image_tag("ps5blanc-removebg-preview.png", class: "taille_image") %>
+      <%= image_tag("xbox-removebg-preview.png", class: "taille_image") %>
+      <%= image_tag("nintendo_switch.png", class: "taille_image") %>
+    </div>
+
+    <div class="prix">
+      <h2><%= @video_game.price %></h2>
+    </div>
+
+    <div data-controller="toggle">
       <%= link_to "Reservation", "#", class: "reservation-link button", data: { action: "click->toggle#fire" } %>
     <div data-toggle-target="togglabelElement" class="d-none">
-      <%= render "reservations/new", video_game: @video_game %>
+      <%= render "form", video_game: @video_game %>
     </div>
   </div>
   <% if @video_game.user.id == current_user.id %>
@@ -19,6 +31,17 @@
   </div>
 </div>
 
-<div class="description-container">
-  <p class="description"><%= @video_game.description %></p>
+<div class="contenu-text">
+  <div class="description-container">
+    <p class="description"><%= @video_game.description %></p>
+  </div>
+
+  <div class="paragraphe">
+    <p>Installation:	Comment activer ce jeu</p>
+    <p>Classification:	PEGI 18</p>
+    <p>Développeur:	Treyarch, Infinity Ward, Raven Software, Beenox, Sledgehammer Games, High Moon Studios, Demonware</p>
+    <p>Editeur:	Activision</p>
+    <p>Date de sortie:	10 novembre 2023</p>
+    <p>Genre:	Jeux solo, Action</p>
+  </div>
 </div>
