@@ -10,8 +10,8 @@
                     input_html: { data: { controller: "datepicker", target: "datepicker.range", range: true , date_target: "end", action: "input->date#calcule" }, class: "custom-input", placeholder: "Choose Reservation Period:" } %>
       </div>
       <div class="right-column">
-        <div class="prix">
-          Prix de la location : <span data-date-target="result"></span>
+        <div class="prix-toggle">
+          Prix Total : <span data-date-target="result"></span>
         </div>
         <div>
           <%= link_to "Valider", video_games_path, class: "btn-toggle" %>
