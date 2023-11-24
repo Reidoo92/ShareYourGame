@@ -62,8 +62,8 @@ body.home-body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  overflow-y: auto;
-  max-height: calc(100vh - 50px);
+  // overflow-y: auto;
+  // max-height: calc(100vh - 50px);
 }
 
 .home-card {
