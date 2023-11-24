@@ -1,12 +1,12 @@
 <div class="taille-max">
-  <div class="image-fond" style="background-image: url('<%= @video_game.photo.attached? ? cl_image_path(@video_game.photo.key) : image_path("Call-of-Duty-MW3-Cover.jpg") %>')">
+  <div class="image-fond" style="background-image: url('<%= @video_game.photo.attached? ? cl_image_path(@video_game.photo.key) : image_path("image_default.png") %>'); background-repeat: no-repeat; background-size: cover;">
     <div class="contenu">
       <div class="image-contenu">
-      <% if @video_game.photo.attached?  %>
-      <%= cl_image_tag @video_game.photo.key, class:"taille_image", crop: :fill %>
-      <% else %>
-        <%= image_tag("Call-of-Duty-MW3-Cover.jpg", class: "taille_image") %>
-      <% end %>
+        <% if @video_game.photo.attached?  %>
+          <%= cl_image_tag @video_game.photo.key, class:"taille_image", crop: :fill %>
+        <% else %>
+          <%= image_tag("image_default.png", class: "taille_image w-100 h-100") %>
+        <% end %>
       </div>
 
       <div class="infos-contenu">
@@ -23,15 +23,17 @@
           <%= @video_game.price %> € / jour
         </div>
 
-        <div data-controller="toggle">
-          <%= link_to "Reservation", "#", class: "reservation-link button", data: { action: "click->toggle#fire" } %>
-        <div data-toggle-target="togglabelElement" class="d-none">
-          <%= render "form", video_game: @video_game %>
-        </div>
-      </div>
-      <% if @video_game.user.id == current_user.id %>
+        <% if @video_game.user.id != current_user.id && Reservation.find_by(user: current_user, video_game: @video_game).nil?%>
+          <div data-controller="toggle">
+              <%= link_to "Reservation", "#", class: "reservation-link button", data: { action: "click->toggle#fire" } %>
+              <div data-toggle-target="togglabelElement" class="d-none">
+                <%= render "form", video_game: @video_game %>
+              </div>
+          </div>
+        <% end %>
+
         <%= link_to "Supprimer mon jeu", video_game_path(@video_game), data: {turbo_method: :delete, turbo_confirm: "Es-tu sur?"}, class: "reservation-link button" %>
-      <% end %>
+
       </div>
     </div>
   </div>

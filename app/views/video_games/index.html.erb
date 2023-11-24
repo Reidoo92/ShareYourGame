@@ -7,7 +7,7 @@
       <div class="home-container">
         <% current_user.video_games.each do |video_game| %>
           <%= link_to video_game_path(video_game), class: "link" do %>
-            <div class="home-card" style="background-image: url('<%= video_game.photo.attached? ? cl_image_path(video_game.photo.key) : image_path("Call-of-Duty-MW3-Cover.jpg") %>'); background-size: cover; background-position: center; back"></div>
+            <div class="home-card" style="background-image: url('<%= video_game.photo.attached? ? cl_image_path(video_game.photo.key) : image_path("image_default.png") %>'); background-size: cover; background-position: center; back"></div>
             <div class="home-title">
               <%= video_game.title %>
             </div>
@@ -21,7 +21,7 @@
     <div class="home-container">
       <% current_user.reservations.each do |reservation| %>
         <%= link_to video_game_path(reservation.video_game), class: "link" do %>
-          <div class="home-card" style="background-image: url('<%= image_path('Call-of-Duty-MW3-Cover.jpg') %>'); background-size: cover; background-position: center; back"></div>
+          <div class="home-card" style="background-image: url('<%= image_path('image_default.png') %>'); background-size: cover; background-position: center; back"></div>
           <div class="home-title">
             <%= reservation.video_game.title %>
           </div>
