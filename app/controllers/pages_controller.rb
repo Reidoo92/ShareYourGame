@@ -5,3 +5,4 @@ class PagesController < ApplicationController
     @video_games = VideoGame.all
   end
 end
+  
