@@ -46,7 +46,6 @@
 }
 
 .description-input {
-  margin-top: 20px;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -55,18 +54,18 @@
 
 .submit-game,
 .input-photo {
-  margin-top: 20px;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
   width: 280px;
+  padding-right: 87px;
 }
 
 .add-text {
   text-align: center;
   margin-top: 150px;
-  color: rgba(222, 24, 24, 0.4);
+  color: #F77504;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   margin-right: 740px;
@@ -93,5 +92,19 @@
 }
 
 .jilsonne-singe {
+  margin-top: 20px;
   margin-right: 200px;
+}
+
+.input-photo {
+  width: 240px;
+  margin-left: 20px;
+}
+
+.custom-textarea {
+  height: 120px;
+}
+
+.submit-button {
+  color: #F77504;
 }

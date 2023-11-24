@@ -14,12 +14,12 @@
         <%= simple_form_for(@video_game) do |f| %>
           <div class="add-container">
             <div class="input-add-flex">
-             <%= f.text_field :title, class: "custom-input2", placeholder: "Title" %>
-                <%= f.text_field :category, class: "custom-input2", placeholder: "Category" %>
-                <%= f.number_field :price, class: "custom-input2", placeholder: "Price" %>
+             <%= f.text_field :title, class: "custom-input2", placeholder: "Title:" %>
+                <%= f.text_field :category, class: "custom-input2", placeholder: "Category:" %>
+                <%= f.number_field :price, class: "custom-input2", placeholder: "Price:" %>
               </div>
               <div class="description-input">
-                <%= f.text_field :description, class: "custom-input2", placeholder: "Description" %>
+                <%= f.text_area :description, class: "custom-input2 custom-textarea", placeholder: "Description:" %>
               </div>
               <div class="jilsonne-singe">
                 <div class="submit-game">
