@@ -1,20 +1,20 @@
 <div data-controller="date" data-date-price-value="<%= @video_game.price %>">
-  <%= simple_form_for @reservation, url: reservations_path, method: :post do |f| %>
+    <%= simple_form_for [@video_game, @reservation] do |f|%>
     <div class="flex-container">
       <div class="left-column">
-        <%= f.input :start_location, label: false,
-                    as: :string,
-                    input_html: { data: { controller: "datepicker", target: "datepicker.range", range: true, date_target: "start" }, class: "custom-input", placeholder: "Choose Reservation Period:" } %>
-        <%= f.input :end_location, label: false,
-                    as: :string,
-                    input_html: { data: { controller: "datepicker", target: "datepicker.range", range: true , date_target: "end", action: "input->date#calcule" }, class: "custom-input", placeholder: "Choose Reservation Period:" } %>
+      <%= f.input :start_location, label: false,
+              as: :string,
+              input_html: { data: { controller: "datepicker", target: "datepicker.range", range: true, date_target: "start" }, class: "custom-input", placeholder: "Choose Reservation Period:" } %>
+    <%= f.input :end_location, label: false,
+              as: :string,
+              input_html: { data: { controller: "datepicker", target: "datepicker.range", range: true , date_target: "end", action: "input->date#calcule" }, class: "custom-input", placeholder: "Choose Reservation Period:" } %>
       </div>
       <div class="right-column">
         <div class="prix-toggle">
           Prix Total : <span data-date-target="result"></span>
         </div>
         <div>
-          <%= link_to "Valider", video_games_path, class: "btn-toggle" %>
+          <%= f.submit "Valider" %>
         </div>
       </div>
     </div>
