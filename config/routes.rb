@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :users
-  resources :video_games
+  resources :video_games do
+    resources :reservations, only: [:create]
+  end
   resources :reservations, only: [:new, :create, :destroy, :show]
 end
