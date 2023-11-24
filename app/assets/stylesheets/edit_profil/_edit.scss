@@ -7,7 +7,7 @@
   border-radius: 8px;
   background-color: #323232; /* Changement de couleur de fond */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  font-family: 'Courier New', Courier, monospace; /* Changement de la police */
+  font-family: "Courier New", Courier, monospace; /* Changement de la police */
 }
 
 h2 {
@@ -27,7 +27,7 @@ h2 {
   border-radius: 8px;
   background-color: rgba(16, 16, 16, 0.4);
   color: #fff;
-  font-family: 'Courier New', Courier, monospace; /* Changement de la police */
+  font-family: "Courier New", Courier, monospace; /* Changement de la police */
 }
 
 .form-inputs input:focus {
@@ -67,7 +67,7 @@ a:hover {
 
 .btn-update {
   text-align: center;
-  background-color: #4682B4;
+  background-color: #4682b4;
   border-radius: 8px;
   display: inline-block;
   font-weight: bold;
@@ -75,6 +75,11 @@ a:hover {
   text-decoration: none;
   width: 280px;
   height: 40px;
-  font-family: 'Courier New', Courier, monospace; /* Changement de la police */
+  font-family: "Courier New", Courier, monospace; /* Changement de la police */
   color: black;
+}
+
+.custom-class-for-hint {
+  color: white;
+  opacity: 0.6;
 }
