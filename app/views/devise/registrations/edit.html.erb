@@ -26,7 +26,8 @@
         <%= f.input :user_name,
                     hint: "Change your Username",
                     required: false,
-                    input_html: { autocomplete: "new-password" } %>
+                    input_html: { autocomplete: "new-password" },
+                    hint_html: { class: 'custom-class-for-hint' } %>
       </div>
 
       <div class="form-actions ">
