@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<body class=home-body>
-<div class="home-container">
-  <% @video_games.each do |video_game| %>
-    <%= link_to video_game_path(video_game), class: "link" do %>
-      <div class="home-card" style="background-image: url('<%= video_game.photo.attached? ? cl_image_path(video_game.photo.key) : image_path("image_default.png") %>'); background-size: cover; background-position: center; back">
-      </div>
-        <div class="home-title">
-        <%= video_game.title %>
-       <div class="price"><strong><%= video_game.price %>€</strong>
-       </div>
-        </div>
-    <% end %>
-  <% end %>
-</div>
-</body>
+  <body class=home-body>
+   <%= image_tag("bgc_home.gif", class: "background-image", alt: "Background for video games") %>
+    <div class="home-container">
+      <% @video_games.each do |video_game| %>
+        <%= link_to video_game_path(video_game), class: "link" do %>
+          <div class="home-card" style="background-image: url('<%= video_game.photo.attached? ? cl_image_path(video_game.photo.key) : image_path("image_default.png") %>'); background-size: cover; background-position: center; back">
+          </div>
+            <div class="home-title">
+            <%= video_game.title %>
+          <div class="price"><strong><%= video_game.price %>€</strong>
+          </div>
+            </div>
+        <% end %>
+      <% end %>
+    </div>
+  </body>
 </html>
