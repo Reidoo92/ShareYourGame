@@ -1,5 +1,5 @@
 .taille-max {
-  height: 450px;
+  height: 500px;
 }
 
 .contenu {
@@ -12,6 +12,7 @@
 
 .image-fond {
   background-image: url("/assets/Call-of-Duty-MW3-Cover.jpg");
+  background-size: cover;
   width: 100%;
   max-height: 350px;
   padding-top: 100px;
@@ -20,6 +21,10 @@
 .image-contenu {
   width: 100%;
   max-width: 616px;
+  height: 350px;
+}
+
+img {
   object-fit: cover;
 }
 
