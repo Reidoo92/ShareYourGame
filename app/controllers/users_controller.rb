@@ -23,8 +23,7 @@ class UsersController < ApplicationController
   end
 
   def update #juste user_name
-    @user = User.find(update_user_name[:id])
-    @user.update(update_user_name[:user])
+    current_user.update(update_user_name)
   end
 
   def destroy
@@ -45,7 +44,7 @@ class UsersController < ApplicationController
   end
 
   def update_user_name
-    params.require(:user).permit(:user_name, :eamil, :password)
+    params.require(:user).permit(:user_name, :eamil, :password, :photo)
   end
 
   # Fonction qui permet d'afficher l'âge de l'utilisateur grâce à sa date d'anniversaire

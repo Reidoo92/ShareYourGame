@@ -1,8 +1,12 @@
 <div class="taille-max">
-  <div class="image-fond">
+  <div class="image-fond" style="background-image: url('<%= @video_game.photo.attached? ? cl_image_path(@video_game.photo.key) : image_path("Call-of-Duty-MW3-Cover.jpg") %>')">
     <div class="contenu">
       <div class="image-contenu">
+      <% if @video_game.photo.attached?  %>
+      <%= cl_image_tag @video_game.photo.key, class:"taille_image", crop: :fill %>
+      <% else %>
         <%= image_tag("Call-of-Duty-MW3-Cover.jpg", class: "taille_image") %>
+      <% end %>
       </div>
 
       <div class="infos-contenu">
