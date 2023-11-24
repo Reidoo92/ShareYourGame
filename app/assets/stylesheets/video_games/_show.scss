@@ -1,4 +1,4 @@
-.taille-max{
+.taille-max {
   height: 450px;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .image-fond {
-
+  background-image: url("/assets/Call-of-Duty-MW3-Cover.jpg");
   width: 100%;
   max-height: 350px;
   padding-top: 100px;
@@ -36,7 +36,12 @@
   flex: 1;
   padding: 20px;
   box-sizing: border-box;
-  background-color: rgba(128, 128, 128, 0.4); /* Remplacez ces valeurs par celles de la couleur grise transparente souhaitée */
+  background-color: rgba(
+    128,
+    128,
+    128,
+    0.4
+  ); /* Remplacez ces valeurs par celles de la couleur grise transparente souhaitée */
   color: white;
   border-radius: 8px;
   margin-right: 50px;
@@ -85,19 +90,6 @@
   border-radius: 10px;
 }
 
-.description-container {
-  border: 2px solid white;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  height: 50%;
-  overflow: hidden;
-  padding: 10px;
-}
-
-.description {
-  margin: 0;
-}
-
 .prix {
   text-align: center;
   font-family: "Courier New", Courier;
@@ -106,21 +98,21 @@
 
 .submit-button,
 .reservation-link.button {
-    text-align: center;
-    background-color: #4682b4;
-    border-radius: 8px;
-    display: inline-block;
-    font-weight: bold;
-    font-size: 16px;
-    text-decoration: none;
-    width: 100%;
-    height: 40px;
-    font-family: "Courier New", Courier, monospace;
-    color: black;
-    margin-bottom: 10px;
-    margin-top: auto;
-    display: block;
-    text-align: center;
+  text-align: center;
+  background-color: #4682b4;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  width: 100%;
+  height: 40px;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  margin-bottom: 10px;
+  margin-top: auto;
+  display: block;
+  text-align: center;
 }
 
 .button {
@@ -143,7 +135,6 @@
 }
 
 .image-contenu,
-.description-container,
 .paragraphe {
   flex: 1;
   box-sizing: border-box;
@@ -160,13 +151,30 @@
   border-radius: 10px;
 }
 
-.description-container {
-  padding: 40px;
-  line-height: 1.5;
-  color: white;
-}
-
 .paragraphe p {
   margin: 0;
   color: white;
+}
+
+.paragraphe {
+  margin-top: 20px;
+}
+
+.description-container {
+  display: flex;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  height: 100%;
+  overflow: hidden;
+  padding: 20px;
+  padding-bottom: 0;
+  color: white;
+}
+
+.description {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
 }
